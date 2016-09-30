@@ -11,14 +11,14 @@ double f( double g){
 void main(int argc, char* argv[]){
 
 	double f(double gee);
-	double integration;
+	double integration=0;
 	int a=atoi(argv[1]);	
 	int b=atoi(argv[2]);
 
 	int n=atoi(argv[3]);
 	
 	for(int i=0;i<n;i++){
-		integration=f((double)(a+(i+0.5)*((b-a)/n))/((b-a)/n));
+		integration= integration + f((double)(a+(i+0.5)*((b-a)/n)))/((b-a)/n);
 	}
 	printf("\n%f result is ",integration);
 
